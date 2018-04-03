@@ -5,6 +5,9 @@ namespace Laravel\Spark\Http\Controllers\Settings\Teams;
 use Illuminate\Http\Request;
 use Laravel\Spark\Http\Controllers\Controller;
 
+use Laravel\Spark\Spark;
+use Laravel\Spark\Contracts\Repositories\TeamRepository;
+
 class DashboardController extends Controller
 {
     /**
