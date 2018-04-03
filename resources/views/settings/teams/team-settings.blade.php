@@ -1,3 +1,4 @@
+
 @extends('spark::layouts.app')
 
 @section('scripts')

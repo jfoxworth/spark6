@@ -31,13 +31,7 @@ class DashboardController extends Controller
     {
         abort_unless($request->user()->onTeam($team), 404);
 
-        echo('Team is ');
-        echo(var_dump($team));
-
         $team = Spark::interact(TeamRepository::class.'@find', [$team]);        
-
-        echo('Team is now ...');
-        echo(var_dump($team));
 
         return view('spark::settings.teams.team-settings', compact('team'));
     }
