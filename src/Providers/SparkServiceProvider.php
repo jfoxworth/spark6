@@ -179,6 +179,7 @@ class SparkServiceProvider extends ServiceProvider
         $this->registerServices();
     }
 
+
     /**
      * Register the Spark services.
      *
