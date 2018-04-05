@@ -3,6 +3,7 @@
 namespace Laravel\Spark\Http\Controllers;
 
 use Laravel\Spark\Invitation;
+use Laravel\Spark\Contracts\Repositories\NotificationRepository;
 
 class InvitationController extends Controller
 {
@@ -26,4 +27,10 @@ class InvitationController extends Controller
 
         return $invitation;
     }
+
+    public function __construct(NotificationRepository $notifications)
+    {
+        $this->notifications = $notifications;
+    }
+    
 }
