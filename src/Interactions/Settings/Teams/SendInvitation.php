@@ -33,7 +33,8 @@ class SendInvitation implements Contract
             event(new UserInvitedToTeam($team, $invitedUser));
         }
 
-        return $invitation;
+        //return $invitation;
+        return
     }
 
     /**
