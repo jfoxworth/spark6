@@ -20,9 +20,14 @@ class SendInvitation implements Contract
 
         $role = array_key_exists($role, Spark::roles()) ? $role : Spark::defaultRole();
 
+
+        // This is commented out because I don't like the idea of emailing when someone gets a team invite
+        // Plus, I don't have email set up yet.
+        /*
         $this->emailInvitation(
             $invitation = $this->createInvitation($team, $email, $invitedUser, $role)
         );
+        */
 
         if ($invitedUser) {
             event(new UserInvitedToTeam($team, $invitedUser));
